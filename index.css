@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Space Mono", monospace;
+  }
+ 
+ 
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    background-color: hsl(185, 41%, 84%);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 0 1.5rem;
+  }
+  .logo{
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+  }
+  
+  .tip-calculator {
+    width: min(100%, 76rem);
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 5px 15px 35px rgba(0, 0, 0, 0.08);
+  }
+  
+  .tip-calculator > * {
+    flex: none;
+    width: 50%;
+  }
+  
+  form {
+    padding: 1rem 3rem 1rem 1rem;
+  }
+  
+  form .form-col:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  
+  form label[for] {
+    display: inline-block;
+    color: hsl(183, 100%, 15%);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    padding: 0 1.5rem 0 2.5rem;
+    text-align: right;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 1.6rem;
+  }
+  
+  
+  .input-group {
+    position: relative;
+    min-height: 3.8rem;
+  }
+  
+  .input-group input {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  input::placeholder {
+    color: #9ebbbd;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: hsl(172, 67%, 45%);
+    box-shadow: 0 0 0 2px hsl(172, 67%, 90%);
+  }
+  
+  .input-group .icon {
+    pointer-events: none;
+    position: absolute;
+    left: 1.3rem;
+    line-height: 0;
+    top: calc(50% - 0.7rem);
+    z-index: 1;
+  }
+  
+  .input-group .icon img {
+    height: 1.4rem;
+  }
+  
+  .input-group input.invalid {
+    border-color: var(--clr-red);
+    box-shadow: 0 0 0 2px hsl(0, 100%, 90%);
+  }
+  
+  form .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  form input[type="radio"] {
+    display: none;
+  }
+  
+  form .tip {
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    min-height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form .tip-custom {
+    background-color: hsl(185, 41%, 95%);
+    color: hsl(183, 100%, 15%);
+  }
+  
+  form .tip:hover,
+  form .tip.active {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+  }
+  
+  .tip-custom input[type="number"] {
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+  
+  .tip-custom input[type="number"]::placeholder {
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+  }
+  
+  .form-col .invalid-feedback {
+    position: absolute;
+    top: -2.6rem;
+    right: 0;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--clr-red);
+  }
+  
+  .result-container {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 1rem;
+    padding: 4rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 34rem;
+  }
+  
+  .result-container button {
+    margin-top: auto;
+  }
+  
+  .result-tip {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .result-tip .text {
+    color: hsl(0, 0%, 100%);
+  }
+  
+  .result-tip .per {
+    color: hsl(184, 14%, 56%);
+    font-size: 1.3rem;
+  }
+  
+  .result-tip .amount {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: hsl(172, 67%, 45%);
+  }
+  
+  .result-container button {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 0.8rem;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .result-container button:hover {
+    background-color: hsl(172, 67%, 80%);
+  }
+  
+  @media screen and (max-width: 650px) {
+    body {
+      padding: 0;
+    }
+  
+    .tip-calculator {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 5rem;
+      padding: 2rem 2rem 3rem;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  
+    .tip-calculator > * {
+      width: 100%;
+    }
+  
+    form {
+      padding: 1rem;
+    }
+  
+    .result-container {
+      min-height: 28rem;
+      margin-top: 3rem;
+    }
+  }
+  
+  @media screen and (max-width: 375px) {
+    form .tips-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }

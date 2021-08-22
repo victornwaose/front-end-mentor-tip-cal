@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+  <img src="./images/logo.svg" alt="logo" class="logo">
+  <div class="tip-calculator">
+    <form>
+      <div class="form-col">
+        <label for="bill">Bill</label>
+        <div class="input-group">
+          <span class="icon">
+            <img src="./src/images/icon-dollar.svg" alt="" />
+          </span>
+          <input type="text" id="bill" name="bill" placeholder="0" />
+        </div>
+      </div>
+      <div class="form-col">
+        <label for="select-tip">Select Tip %</label>
+        <div class="tips-grid">
+          <label class="tip">
+            <input type="radio" name="tip" id="select-tip" value="5" />
+            <span class="tip-amount">5%</span>
+          </label>
+          <label class="tip">
+            <input type="radio" name="tip" id="select-tip" value="10" />
+            <span class="tip-amount">10%</span>
+          </label>
+          <label class="tip">
+            <input type="radio" name="tip" id="select-tip" value="15" />
+            <span class="tip-amount">15%</span>
+          </label>
+          <label class="tip">
+            <input type="radio" name="tip" id="select-tip" value="25" />
+            <span class="tip-amount">25%</span>
+          </label>
+          <label class="tip">
+            <input type="radio" name="tip" id="select-tip" value="50" />
+            <span class="tip-amount">50%</span>
+          </label>
+          <label class="tip tip-custom">
+            <input
+              type="number"
+              min="0"
+              max="100"
+              name="tip-custom"
+              id="input-custom-tip"
+              placeholder="Custom"
+            />
+          </label>
+        </div>
+      </div>
+      <div class="form-col">
+        <label for="person-amount">Number of People</label>
+        <div class="input-group">
+          <span class="icon">
+            <img src="./src/images/icon-person.svg" alt="" />
+          </span>
+          <input
+            type="number"
+            id="person-amount"
+            name="person-amount"
+            placeholder="0"
+            min="0"
+            max="10"
+          />
+          <small class="invalid-feedback"></small>
+        </div>
+      </div>
+    </form>
+    <div class="result-container">
+      <div class="result-tip">
+        <p class="text">Tip Amount <br /><span class="per">/ person</span></p>
+        <span class="amount" id="person-tip-amount">$0</span>
+      </div>
+      <div class="result-tip">
+        <p class="text">Total <br /><span class="per">/ person</span></p>
+        <span class="amount" id="total">$0</span>
+      </div>
+      <button type="reset" id="reset">Reset</button>
+    </div>
+  </div>
+    </div>
+
+
+  <script src="index.js"></script>
+</body>
+</html>

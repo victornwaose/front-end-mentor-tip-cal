@@ -1,0 +1,37 @@
+﻿# Avoid accidental upload of the Sketch and Figma design files
+#####################################################
+## Please do not remove lines 5 and 6
+ - thanks! 🙂 ##
+#####################################################
+*.sketch
+*.fig
+
+# Avoid accidental XD upload if you convert 
+the design file
+###############################################
+## Please do not remove line 12 - 
+thanks! 🙂 ##
+###############################################
+*.xd
+
+# Avoid your project being littered with annoying 
+.DS_Store files!
+.DS_Store
+.prettierignore
+
+
+
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <div class="attribution">
+    Challenge by
+     <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+     
+    Coded by <a href="#">Victor nwaose </a>.
+  </div>
+
+
+#btnLeft:active
